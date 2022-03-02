@@ -24,7 +24,7 @@ const MyComponent: React.FC<T> = () => <div>
 
 ### Options
 
-If there are any options, describe them here. Otherwise, delete this section.
+- `maxLines`: `number`, default: `20`
 
 ## Further Reading
 
