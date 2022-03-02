@@ -20,12 +20,17 @@ const ruleTester = new RuleTester(getRuleTesterConfig());
 
 const ruleOptions = [{ maxLines: 2 }];
 ruleTester.run("max-jsx-lines", rule, {
-  valid: ["const MyComponent: React.FC = () => <div></div>"],
+  valid: [
+    `const MyComponent: React.FC = () => <div>
+  </div>`,
+  ],
 
   invalid: [
     // case: single JSXElement
     {
-      code: `const MyComponent: React.FC = () => <div>${"\n".repeat(3)}</div>`,
+      code: `const MyComponent: React.FC = () => <div>
+      <div></div>
+      </div>`,
       errors: [
         { message: "JSX Element exceeds max lines.", type: "JSXElement" },
       ],
@@ -34,7 +39,9 @@ ruleTester.run("max-jsx-lines", rule, {
     // case: nested JSXElement
     {
       code: `const MyComponent: React.FC = () => <div>
-        {true && <div>${"\n".repeat(3)}</div>}
+        {true && <div>
+          <div></div> 
+        </div>}
       </div>`,
       errors: [
         { message: "JSX Element exceeds max lines.", type: "JSXElement" },
