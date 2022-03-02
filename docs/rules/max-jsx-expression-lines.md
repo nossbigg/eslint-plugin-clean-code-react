@@ -50,7 +50,7 @@ const MyComponent = () => (
 
 ### Options
 
-- `maxLines`: `number`, default: `20`
+- `maxLines`: `number`, default: `3`
 
 ## Further Reading
 
