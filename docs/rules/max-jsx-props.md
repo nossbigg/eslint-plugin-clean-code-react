@@ -40,6 +40,21 @@ const MyComponent: React.FC = () => (
 ### Options
 
 - `maxProps`: `number`, default: `5`
+- `excludedComponents`: `string[]`, default: `[]`, useful for excluding 3rd-party library components
+
+eg:
+
+```typescript
+// with maxProps = 5, excludedComponents = ['UITable']
+<UITable
+  data={data}
+  headerConfig={headerConfig}
+  border={borderConfig}
+  isResponsive
+  isMultiTabView
+  hideBottomBar
+/>
+```
 
 ## Further Reading
 

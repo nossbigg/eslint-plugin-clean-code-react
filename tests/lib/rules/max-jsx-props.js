@@ -28,6 +28,20 @@ ruleTester.run("max-jsx-props", rule, {
       isShowOnly
     />
     `,
+    // support excluding components from 3rd-party libs
+    {
+      code: `
+      const MyComponent: React.FC = () => <UITable
+        data={data}  
+        headerConfig={headerConfig}
+        border={borderConfig}
+        isResponsive
+        isMultiTabView
+        hideBottomBar
+      />
+      `,
+      options: [{ excludedComponents: ["UITable"] }],
+    },
   ],
 
   invalid: [
