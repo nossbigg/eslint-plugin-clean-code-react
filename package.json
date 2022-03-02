@@ -11,12 +11,14 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint .",
+    "pdm": "peerdeps-manager",
     "test": "mocha tests --recursive"
   },
   "dependencies": {
     "requireindex": "^1.2.0"
   },
   "devDependencies": {
+    "@nossbigg/peerdeps-manager": "^0.0.0-alpha2",
     "eslint": "^8.0.1",
     "eslint-plugin-eslint-plugin": "^4.0.1",
     "eslint-plugin-node": "^11.1.0",
@@ -26,6 +28,7 @@
     "node": "12.x || 14.x || >= 16"
   },
   "peerDependencies": {
+    "@typescript-eslint/parser": ">=5",
     "eslint": ">=6"
   },
   "license": "ISC"
