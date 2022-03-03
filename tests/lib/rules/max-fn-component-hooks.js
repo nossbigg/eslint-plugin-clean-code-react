@@ -16,6 +16,7 @@ const { getRuleTesterConfig } = require("../get-rule-tester-config");
 // Tests
 //------------------------------------------------------------------------------
 
+const ruleOptions = [{ maxHooks: 1 }];
 const ruleTester = new RuleTester(getRuleTesterConfig());
 ruleTester.run("max-fn-component-hooks", rule, {
   valid: [
@@ -25,7 +26,7 @@ ruleTester.run("max-fn-component-hooks", rule, {
         useState();
         return <div />;
       };`,
-      options: [{ maxHooks: 1 }],
+      options: ruleOptions,
     },
     // give me some code that won't trigger a warning
   ],
@@ -44,7 +45,7 @@ ruleTester.run("max-fn-component-hooks", rule, {
           type: "VariableDeclaration",
         },
       ],
-      options: [{ maxHooks: 1 }],
+      options: ruleOptions,
     },
   ],
 });
