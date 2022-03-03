@@ -19,11 +19,14 @@ const { getRuleTesterConfig } = require("../get-rule-tester-config");
 const ruleTester = new RuleTester(getRuleTesterConfig());
 ruleTester.run("max-fn-component-hooks", rule, {
   valid: [
-    `
-    const MyComponent: React.FunctionComponent = () => {
-      useState();
-      return <div />;
-    };`,
+    {
+      code: `
+      const MyComponent: React.FunctionComponent = () => {
+        useState();
+        return <div />;
+      };`,
+      options: [{ maxHooks: 1 }],
+    },
     // give me some code that won't trigger a warning
   ],
 
@@ -31,10 +34,6 @@ ruleTester.run("max-fn-component-hooks", rule, {
     {
       code: `
       const MyComponent: React.FunctionComponent = () => {
-        useState();
-        useState();
-        useState();
-        useState();
         useState();
         some.useMyHook();
         return <div />;
@@ -45,6 +44,7 @@ ruleTester.run("max-fn-component-hooks", rule, {
           type: "VariableDeclaration",
         },
       ],
+      options: [{ maxHooks: 1 }],
     },
   ],
 });

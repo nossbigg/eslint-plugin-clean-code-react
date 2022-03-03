@@ -36,3 +36,7 @@ const MyComponent: React.FunctionComponent = () => {
   return <div />;
 };
 ```
+
+### Options
+
+- `maxHooks`: `number`, default: `5`
