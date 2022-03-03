@@ -22,6 +22,10 @@ ruleTester.run("component-prop-typedef-name", rule, {
     `const MyComponent: React.FC<TProps> = () => <div />`,
     `class MyComponent extends React.Component<TProps, TState> {}`,
     `class MyComponent extends React.PureComponent<TProps, TState> {}`,
+    // handle inline type literal
+    `const MyComponent: React.FC<{}> = () => <div />`,
+    `class MyComponent extends React.Component<{}> {}`,
+    `class MyComponent extends React.PureComponent<{}> {}`,
   ],
 
   invalid: [
