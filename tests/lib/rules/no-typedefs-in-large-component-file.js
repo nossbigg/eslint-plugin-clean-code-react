@@ -36,7 +36,7 @@ ruleTester.run("no-typedefs-in-large-component-file", rule, {
       options: ruleConfig,
     },
     {
-      code: `const MyComponent: React.FC<MyComponentProps> = <div/>;
+      code: `const MyComponent: React.FC<MyComponentProps> = () => <div/>;
       type SomeOtherTypedef = {};
       `,
       options: ruleConfig,
