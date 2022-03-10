@@ -53,5 +53,19 @@ ruleTester.run("max-jsx-spread-props", rule, {
         },
       ],
     },
+    {
+      code: `
+       const MyComponent: React.FC = () => <SomeLib.AnotherComponent
+       {...otherProps1}
+       {...otherProps2}
+       {...otherProps3}
+     />`,
+      errors: [
+        {
+          message: "JSX Element exceeds max spread props.",
+          type: "JSXOpeningElement",
+        },
+      ],
+    },
   ],
 });

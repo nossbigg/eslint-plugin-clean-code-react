@@ -62,5 +62,22 @@ ruleTester.run("max-jsx-props", rule, {
         },
       ],
     },
+    {
+      code: `
+      const MyComponent: React.FC = () => <SomeLib.AnotherComponent
+      firstName={firstName}
+      lastName={lastName}
+      user={user}
+      isAdmin
+      isShowOnly
+      {...someOtherProps}
+    />`,
+      errors: [
+        {
+          message: "JSX Element exceeds max props.",
+          type: "JSXOpeningElement",
+        },
+      ],
+    },
   ],
 });
