@@ -42,7 +42,7 @@ ruleTester.run("max-fn-component-hooks", rule, {
       errors: [
         {
           message: "Too many hooks in React component.",
-          type: "VariableDeclaration",
+          type: "ArrowFunctionExpression",
         },
       ],
       options: ruleOptions,
