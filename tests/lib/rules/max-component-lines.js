@@ -43,7 +43,7 @@ ruleTester.run("max-component-lines", rule, {
       errors: [
         {
           message: "React component exceeds max lines.",
-          type: "VariableDeclaration",
+          type: "ArrowFunctionExpression",
         },
       ],
       options: ruleOptions,
