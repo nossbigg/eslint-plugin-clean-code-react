@@ -58,7 +58,7 @@ ruleTester.run("no-other-component-in-large-component-file", rule, {
       errors: [
         {
           message: "No other component in large component file.",
-          type: "VariableDeclaration",
+          type: "ArrowFunctionExpression",
         },
       ],
       options: ruleConfig,
