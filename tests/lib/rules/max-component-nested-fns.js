@@ -54,7 +54,7 @@ ruleTester.run("max-component-nested-fns", rule, {
       errors: [
         {
           message: "React component exceeds max number of nested functions.",
-          type: "VariableDeclaration",
+          type: "ArrowFunctionExpression",
         },
       ],
       options: ruleOptions,
