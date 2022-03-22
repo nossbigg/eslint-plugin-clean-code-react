@@ -18,7 +18,7 @@ const { getRuleTesterConfig } = require("../get-rule-tester-config");
 
 const ruleTester = new RuleTester(getRuleTesterConfig());
 
-const ruleOptions = [{ maxLines: 2 }];
+const ruleOptions = [{ maxJsxLines: 2 }];
 ruleTester.run("max-jsx-lines", rule, {
   valid: [
     `const MyComponent: React.FC = () => <div>
