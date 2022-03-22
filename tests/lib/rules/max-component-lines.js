@@ -16,7 +16,7 @@ const { getRuleTesterConfig } = require("../get-rule-tester-config");
 // Tests
 //------------------------------------------------------------------------------
 
-const ruleOptions = [{ maxLines: 3 }];
+const ruleOptions = [{ maxComponentLines: 3 }];
 const ruleTester = new RuleTester(getRuleTesterConfig());
 ruleTester.run("max-component-lines", rule, {
   valid: [
