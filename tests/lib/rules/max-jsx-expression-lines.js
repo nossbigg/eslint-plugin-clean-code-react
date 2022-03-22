@@ -18,7 +18,7 @@ const { getRuleTesterConfig } = require("../get-rule-tester-config");
 
 const ruleTester = new RuleTester(getRuleTesterConfig());
 
-const ruleOptions = [{ maxLines: 3 }];
+const ruleOptions = [{ maxJsxExpressionLines: 3 }];
 ruleTester.run("max-jsx-expression-lines", rule, {
   valid: [
     // case: truthy check
