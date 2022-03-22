@@ -1,7 +1,7 @@
 {
   "name": "@nossbigg/eslint-plugin-clean-code-react",
   "version": "0.0.0",
-  "description": "tbc",
+  "description": "ESLint rules to keep your React components squeaky clean ✨🧼",
   "keywords": [
     "eslint",
     "eslintplugin",
