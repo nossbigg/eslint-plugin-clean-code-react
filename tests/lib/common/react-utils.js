@@ -1,5 +1,8 @@
 const assert = require("assert");
-const { fcTypeAllShorthands } = require("../../../lib/common/react-utils");
+const {
+  fcTypeAllShorthands,
+  classTypeAllShorthands,
+} = require("../../../lib/common/react-utils");
 
 describe("react-utils", () => {
   describe("fcTypeAllShorthands", () => {
@@ -19,6 +22,18 @@ describe("react-utils", () => {
         "React.VFC",
       ];
       assert.deepEqual(fcTypeAllShorthands, expectedResult);
+    });
+  });
+
+  describe("classTypeAllShorthands", () => {
+    it("matches snapshot", () => {
+      const expectedResult = [
+        "Component",
+        "PureComponent",
+        "React.Component",
+        "React.PureComponent",
+      ];
+      assert.deepEqual(classTypeAllShorthands, expectedResult);
     });
   });
 });
