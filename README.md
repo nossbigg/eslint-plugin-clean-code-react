@@ -4,7 +4,13 @@ ESLint rules to keep your React components squeaky clean ✨🧼
 
 ## Rules
 
+_Note: All rule names are prefixed with_ `@nossbigg/clean-code-react/`:
+
+- eg. To use `component-prop-typedef-name`, the full rule name is `@nossbigg/clean-code-react/component-prop-typedef-name`
+
 `component`:
+
+_Rules that apply to both Function and Class React Components_
 
 | Rule                                                                                                                     | Description                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
@@ -20,6 +26,8 @@ ESLint rules to keep your React components squeaky clean ✨🧼
 
 `jsx`:
 
+_Rules that apply to JSX Elements_
+
 | Rule                                                                       | Description                                                           |
 | -------------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | [`max-jsx-expression-lines`](./docs/rules/max-jsx-expression-lines.md)     | Ensures that JSXExpression blocks do not exceed max lines.            |
@@ -32,11 +40,15 @@ ESLint rules to keep your React components squeaky clean ✨🧼
 
 `fn-component`:
 
+_Rules that apply to Function React Component_
+
 | Rule                                                               | Description                                                                   |
 | ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | [`max-fn-component-hooks`](./docs/rules/max-fn-component-hooks.md) | Ensures that React Function Component does not use more than max React Hooks. |
 
 `class-component`:
+
+_Rules that apply to Class React Component_
 
 | Rule                                                                               | Description                                                |
 | ---------------------------------------------------------------------------------- | ---------------------------------------------------------- |
@@ -44,13 +56,15 @@ ESLint rules to keep your React components squeaky clean ✨🧼
 
 `hooks`:
 
+_Rules that apply to React Hooks_
+
 | Rule                                                                   | Description                                                     |
 | ---------------------------------------------------------------------- | --------------------------------------------------------------- |
 | [`max-hooks-in-custom-hook`](./docs/rules/max-hooks-in-custom-hook.md) | Ensures that custom React Hooks do not use more than max hooks. |
 
 ## Rule-level settings
 
-<TBC>
+This plugin allows for rule-level settings:
 
 ```js
 // .eslintrc.js
@@ -61,6 +75,83 @@ ESLint rules to keep your React components squeaky clean ✨🧼
     }
   }
 }
+```
+
+### Available settings:
+
+1.`largeComponentLength`
+
+Purpose: Determines the threshold for a large react component.
+
+Used by:
+
+- `no-external-fn-definition-in-large-component-file`
+- `no-other-component-in-large-component-file`
+- `no-styled-components-def-in-large-component-file`
+- `no-typedefs-in-large-component-file`
+
+Value: `number`, default: `50`
+
+## Supported Syntax
+
+### Supported Syntax:
+
+```typescript
+// Function Component using arrow function
+const MyFunctionComponent: React.FunctionComponent = () => <></>;
+
+// Function Component using function
+const MyFunctionComponent: React.FunctionComponent = function() => <></>;
+
+// Class Component
+class MyClassComponent extends React.Component {
+  render() {
+    return <></>;
+  }
+}
+```
+
+Supported Function Component types:
+
+- `FunctionComponent`
+- `FC`
+- `StatelessComponent`
+- `SFC`
+- `VoidFunctionComponent`
+- `VFC`
+- `React.FunctionComponent`
+- `React.FC`
+- `React.StatelessComponent`
+- `React.SFC`
+- `React.VoidFunctionComponent`
+- `React.VFC`
+
+Supported Class Component types:
+
+- `Component`
+- `PureComponent`
+- `React.Component`
+- `React.PureComponent`
+
+### Unsupported Syntax:
+
+```typescript
+// function component defined using function without assignment
+function MyFunctionComoponent() {
+  return <></>;
+}
+
+// curried function component generator
+const makeMyFunctionComponent = (): React.FunctionComponent => () => <></>;
+
+// function without type definition
+const MyFunctionComponent = () => <></>;
+
+// function with JSX.ELement return type
+const MyFunctionComponent = (): JSX.Element => <></>;
+
+// function with React.ReactNode return type
+const MyFunctionComponent = (): React.ReactNode => <></>;
 ```
 
 ## Installation
@@ -94,7 +185,10 @@ yarn add -D @nossbigg/eslint-plugin-clean-code-react
 // .eslintrc.js
 {
   "rules": {
-    "@nossbigg/clean-code-react/max-jsx-lines": 2
+    // without rule config
+    "@nossbigg/clean-code-react/max-component-lines": "error",
+    // with rule config
+    "@nossbigg/clean-code-react/max-jsx-lines": ["error", { maxJsxLines: 31 }],
   }
 }
 ```
