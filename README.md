@@ -92,6 +92,10 @@ Used by:
 
 Value: `number`, default: `50`
 
+_Note_: When `largeComponentLength` is defined in multiple places, the precedence order is as follows:
+
+- `rule config` > `plugin setting config` > `default value`
+
 ## Supported Syntax
 
 ### Supported Syntax:
