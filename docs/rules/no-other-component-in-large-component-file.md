@@ -1,6 +1,6 @@
 # no-other-component-in-large-component-file
 
-"Ensures that no other components exist in the same file when a large component exists.
+No other components exist in the same file when a large component exists.
 
 ## Rule Details
 

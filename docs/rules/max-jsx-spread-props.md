@@ -1,6 +1,6 @@
 # max-jsx-spread-props
 
-Ensures that `JSXElement` does not exceed max number of spread props.
+JSX Element does not exceed max number of spread props.
 
 ## Rule Details
 

@@ -1,6 +1,6 @@
 # no-jsx-complex-spread-prop
 
-Ensures that `JSXElement` does not contain complex spread props.
+JSX Element does not contain complex spread props.
 
 ## Rule Details
 

@@ -1,6 +1,6 @@
 # no-jsx-inline-style-prop
 
-Ensures that JSX Element does not contain inline style prop.
+JSX Element does not contain inline style prop.
 
 ## Rule Details
 

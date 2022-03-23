@@ -1,6 +1,6 @@
 # no-unnecessary-class-component
 
-Ensures that unnecessary class components are not allowed.
+Unnecessary class components are not allowed.
 
 ## Rule Details
 

@@ -1,6 +1,6 @@
 # max-jsx-expression-lines
 
-Ensures that `JSXExpression` blocks do not exceed max lines.
+JSX Expression blocks do not exceed max lines.
 
 ## Rule Details
 

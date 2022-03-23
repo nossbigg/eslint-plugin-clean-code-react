@@ -1,6 +1,6 @@
 # max-hooks-in-custom-hook
 
-Ensures that custom React Hooks do not use more than max hooks.
+Custom React Hooks do not use more than max hooks.
 
 ## Rule Details
 

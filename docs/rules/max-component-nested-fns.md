@@ -1,6 +1,6 @@
 # max-component-nested-fns
 
-Ensures component does not exceed max number of nested functions.
+React Component does not exceed max number of nested functions.
 
 ## Rule Details
 

@@ -1,6 +1,6 @@
 # max-fn-component-hooks
 
-Ensures that React Function Component does not use more than max React Hooks.
+React Function Component does not use more than max React Hooks.
 
 ## Rule Details
 

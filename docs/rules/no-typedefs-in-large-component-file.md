@@ -1,6 +1,6 @@
 # no-typedefs-in-large-component-file
 
-Ensures that typedefs are not declared in the same file when a large component exists.
+Typedefs are not declared in the same file when a large component exists.
 
 ## Rule Details
 

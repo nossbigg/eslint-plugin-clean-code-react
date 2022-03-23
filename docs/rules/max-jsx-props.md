@@ -1,6 +1,6 @@
 # max-jsx-props
 
-Ensures that `JSXElement` does not exceed max number of props.
+JSX Element does not exceed max number of props.
 
 ## Rule Details
 

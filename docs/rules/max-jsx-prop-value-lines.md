@@ -1,6 +1,6 @@
 # max-jsx-prop-value-lines
 
-Ensures that JSX prop value does not exceed max lines.
+JSX Element prop value does not exceed max lines.
 
 ## Rule Details
 

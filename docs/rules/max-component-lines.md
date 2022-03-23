@@ -1,6 +1,6 @@
 # max-component-lines
 
-Ensures that React Component declarations do not exceed max lines.
+React Component declarations do not exceed max lines.
 
 ## Rule Details
 

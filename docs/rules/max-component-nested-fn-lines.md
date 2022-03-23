@@ -1,6 +1,6 @@
 # max-component-nested-fn-lines
 
-Ensures nested functions within React component does not exceed max lines.
+Nested functions within React Component does not exceed max lines.
 
 ## Rule Details
 

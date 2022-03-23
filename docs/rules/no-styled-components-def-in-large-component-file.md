@@ -1,6 +1,6 @@
 # no-styled-components-def-in-large-component-file
 
-Ensures that no styled component definitions exist in the same file when a large component exists.
+No styled components are declared in large component file.
 
 ## Rule Details
 

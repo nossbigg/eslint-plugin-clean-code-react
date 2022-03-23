@@ -12,55 +12,55 @@ _Note: All rule names are prefixed with_ `@nossbigg/clean-code-react/`:
 
 _Rules that apply to both Function and Class React Components_
 
-| Rule                                                                                                                     | Description                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
-| [`component-prop-typedef-name`](./docs/rules/component-prop-typedef-name.md)                                             | Ensures React Component typedef name contains 'Props'.                                              |
-| [`max-component-lines`](./docs/rules/max-component-lines.md)                                                             | Ensures that React Component declarations do not exceed max lines.                                  |
-| [`max-component-nested-fn-lines`](./docs/rules/max-component-nested-fn-lines.md)                                         | Ensures nested functions within React component does not exceed max lines.                          |
-| [`max-component-nested-fns`](./docs/rules/max-component-nested-fns.md)                                                   | Ensures component does not exceed max number of nested functions.                                   |
-| [`no-component-prop-inline-typedef`](./docs/rules/no-component-prop-inline-typedef.md)                                   | Ensures that React Component typedefs do not contain inline typedefs.                               |
-| [`no-external-fn-definition-in-large-component-file`](./docs/rules/no-external-fn-definition-in-large-component-file.md) | Ensures that no external function definitions exist in the same file when a large component exists. |
-| [`no-other-component-in-large-component-file`](./docs/rules/no-other-component-in-large-component-file.md)               | Ensures that no other components exist in the same file when a large component exists.              |
-| [`no-styled-components-def-in-large-component-file`](./docs/rules/no-styled-components-def-in-large-component-file.md)   | Ensures that no styled components are declared in large component file.                             |
-| [`no-typedefs-in-large-component-file`](./docs/rules/no-typedefs-in-large-component-file.md)                             | Ensures that typedefs are not declared in the same file when a large component exists.              |
+| Rule                                                                                                                     | Description                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+| [`component-prop-typedef-name`](./docs/rules/component-prop-typedef-name.md)                                             | React Component typedef name contains 'Props'.                                         |
+| [`max-component-lines`](./docs/rules/max-component-lines.md)                                                             | React Component declarations do not exceed max lines.                                  |
+| [`max-component-nested-fn-lines`](./docs/rules/max-component-nested-fn-lines.md)                                         | Nested functions within React Component does not exceed max lines.                     |
+| [`max-component-nested-fns`](./docs/rules/max-component-nested-fns.md)                                                   | React Component does not exceed max number of nested functions.                        |
+| [`no-component-prop-inline-typedef`](./docs/rules/no-component-prop-inline-typedef.md)                                   | React Component typedefs do not contain inline typedefs.                               |
+| [`no-external-fn-definition-in-large-component-file`](./docs/rules/no-external-fn-definition-in-large-component-file.md) | No external function definitions exist in the same file when a large component exists. |
+| [`no-other-component-in-large-component-file`](./docs/rules/no-other-component-in-large-component-file.md)               | No other components exist in the same file when a large component exists.              |
+| [`no-styled-components-def-in-large-component-file`](./docs/rules/no-styled-components-def-in-large-component-file.md)   | No styled components are declared in large component file.                             |
+| [`no-typedefs-in-large-component-file`](./docs/rules/no-typedefs-in-large-component-file.md)                             | Typedefs are not declared in the same file when a large component exists.              |
 
 `jsx`:
 
 _Rules that apply to JSX Elements_
 
-| Rule                                                                       | Description                                                           |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| [`max-jsx-expression-lines`](./docs/rules/max-jsx-expression-lines.md)     | Ensures that JSXExpression blocks do not exceed max lines.            |
-| [`max-jsx-lines`](./docs/rules/max-jsx-lines.md)                           | Ensures that JSXElement blocks do not exceed max lines.               |
-| [`max-jsx-prop-value-lines`](./docs/rules/max-jsx-prop-value-lines.md)     | Ensures that JSX prop value does not exceed max lines.                |
-| [`max-jsx-props`](./docs/rules/max-jsx-props.md)                           | Ensures that `JSXElement` does not exceed max number of props.        |
-| [`max-jsx-spread-props`](./docs/rules/max-jsx-spread-props.md)             | Ensures that `JSXElement` does not exceed max number of spread props. |
-| [`no-jsx-complex-spread-prop`](./docs/rules/no-jsx-complex-spread-prop.md) | Ensures that `JSXElement` does not contain complex spread props.      |
-| [`no-jsx-inline-style-prop`](./docs/rules/no-jsx-inline-style-prop.md)     | Ensures that JSX Element does not contain inline style prop.          |
+| Rule                                                                       | Description                                             |
+| -------------------------------------------------------------------------- | ------------------------------------------------------- |
+| [`max-jsx-expression-lines`](./docs/rules/max-jsx-expression-lines.md)     | JSX Expression blocks do not exceed max lines.          |
+| [`max-jsx-lines`](./docs/rules/max-jsx-lines.md)                           | JSX Element blocks do not exceed max lines.             |
+| [`max-jsx-prop-value-lines`](./docs/rules/max-jsx-prop-value-lines.md)     | JSX Element prop value does not exceed max lines.       |
+| [`max-jsx-props`](./docs/rules/max-jsx-props.md)                           | JSX Element does not exceed max number of props.        |
+| [`max-jsx-spread-props`](./docs/rules/max-jsx-spread-props.md)             | JSX Element does not exceed max number of spread props. |
+| [`no-jsx-complex-spread-prop`](./docs/rules/no-jsx-complex-spread-prop.md) | JSX Element does not contain complex spread props.      |
+| [`no-jsx-inline-style-prop`](./docs/rules/no-jsx-inline-style-prop.md)     | JSX Element does not contain inline style prop.         |
 
 `fn-component`:
 
 _Rules that apply to Function React Component_
 
-| Rule                                                               | Description                                                                   |
-| ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| [`max-fn-component-hooks`](./docs/rules/max-fn-component-hooks.md) | Ensures that React Function Component does not use more than max React Hooks. |
+| Rule                                                               | Description                                                      |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| [`max-fn-component-hooks`](./docs/rules/max-fn-component-hooks.md) | React Function Component does not use more than max React Hooks. |
 
 `class-component`:
 
 _Rules that apply to Class React Component_
 
-| Rule                                                                               | Description                                                |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| [`no-unnecessary-class-component`](./docs/rules/no-unnecessary-class-component.md) | Ensures that unnecessary class components are not allowed. |
+| Rule                                                                               | Description                                   |
+| ---------------------------------------------------------------------------------- | --------------------------------------------- |
+| [`no-unnecessary-class-component`](./docs/rules/no-unnecessary-class-component.md) | Unnecessary class components are not allowed. |
 
 `hooks`:
 
 _Rules that apply to React Hooks_
 
-| Rule                                                                   | Description                                                     |
-| ---------------------------------------------------------------------- | --------------------------------------------------------------- |
-| [`max-hooks-in-custom-hook`](./docs/rules/max-hooks-in-custom-hook.md) | Ensures that custom React Hooks do not use more than max hooks. |
+| Rule                                                                   | Description                                        |
+| ---------------------------------------------------------------------- | -------------------------------------------------- |
+| [`max-hooks-in-custom-hook`](./docs/rules/max-hooks-in-custom-hook.md) | Custom React Hooks do not use more than max hooks. |
 
 ## Rule-level settings
 
@@ -191,7 +191,7 @@ yarn add -D @nossbigg/eslint-plugin-clean-code-react
 
 2. Use plugin + rules
 
-```json
+```js
 // .eslintrc.js
 {
   // use plugin + recommended rules

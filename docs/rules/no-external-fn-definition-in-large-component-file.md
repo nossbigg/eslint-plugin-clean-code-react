@@ -1,6 +1,6 @@
 # no-external-fn-definition-in-large-component-file
 
-Ensures that no external function definitions exist in the same file when a large component exists.
+No external function definitions exist in the same file when a large component exists.
 
 ## Rule Details
 

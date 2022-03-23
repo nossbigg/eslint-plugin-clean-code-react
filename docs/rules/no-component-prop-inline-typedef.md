@@ -1,6 +1,6 @@
 # no-component-prop-inline-typedef
 
-Ensures that React Component typedefs do not contain inline typedefs.
+React Component typedefs do not contain inline typedefs.
 
 ## Rule Details
 

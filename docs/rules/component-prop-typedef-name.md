@@ -1,6 +1,6 @@
 # component-prop-typedef-name
 
-Ensures React Component typedef name contains 'Props'.
+React Component typedef name contains 'Props'.
 
 ## Rule Details
 

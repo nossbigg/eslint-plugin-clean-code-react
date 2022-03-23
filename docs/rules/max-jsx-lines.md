@@ -1,6 +1,6 @@
 # max-jsx-lines
 
-Ensures that `JSXElement` blocks do not exceed max lines.
+JSX Element blocks do not exceed max lines.
 
 ## Rule Details
 
