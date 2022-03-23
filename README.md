@@ -189,25 +189,21 @@ Steps:
 yarn add -D @nossbigg/eslint-plugin-clean-code-react
 ```
 
-2. Use plugin
+2. Use plugin + rules
 
-```js
+```json
 // .eslintrc.js
 {
-  "plugins": ["@nossbigg/eslint-plugin-clean-code-react"]
-}
-```
+  // use plugin + recommended rules
+  "plugins": ["@nossbigg/clean-code-react"],
+  "extends": ["plugin:@nossbigg/clean-code-react/recommended"],
 
-3. Use rules
-
-```js
-// .eslintrc.js
-{
+  // define specific rules
   "rules": {
     // without rule config
     "@nossbigg/clean-code-react/max-component-lines": "error",
     // with rule config
-    "@nossbigg/clean-code-react/max-jsx-lines": ["error", { maxJsxLines: 31 }],
+    "@nossbigg/clean-code-react/max-jsx-lines": ["error", { "maxJsxLines": 31 }]
   }
 }
 ```
