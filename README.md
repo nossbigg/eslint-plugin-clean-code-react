@@ -154,6 +154,25 @@ const MyFunctionComponent = (): JSX.Element => <></>;
 const MyFunctionComponent = (): React.ReactNode => <></>;
 ```
 
+### Tip: Ensuring all function components are declared using arrow function.
+
+You can use [`eslint-plugin-react`](https://github.com/yannickcr/eslint-plugin-react)'s [`react/function-component-definition`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md) to ensure that all function components are declared using arrow functions.
+
+```js
+// .eslintrc.js
+{
+  "rules": {
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ]
+  }
+}
+```
+
 ## Installation
 
 Prerequisites:
