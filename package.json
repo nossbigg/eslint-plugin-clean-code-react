@@ -9,6 +9,7 @@
   ],
   "author": "nossbigg",
   "main": "lib/index.js",
+  "homepage": "https://github.com/nossbigg/eslint-plugin-clean-code-react",
   "scripts": {
     "lint": "eslint .",
     "pdm": "peerdeps-manager",
