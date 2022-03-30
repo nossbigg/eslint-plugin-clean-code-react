@@ -206,6 +206,49 @@ ruleTester.run("max-component-lines", rule, {
       ],
       options: ruleOptions,
     },
+    // function component: no typedefs
+    // arrow function
+    {
+      code: `const MyComponent = () => {
+        1==1;
+        return <div />
+       }`,
+      errors: [
+        {
+          message: "React component exceeds max lines.",
+          type: "ArrowFunctionExpression",
+        },
+      ],
+      options: ruleOptions,
+    },
+    // function expression
+    {
+      code: `const MyComponent = function() {
+        1==1;
+        return <div />
+       }`,
+      errors: [
+        {
+          message: "React component exceeds max lines.",
+          type: "FunctionExpression",
+        },
+      ],
+      options: ruleOptions,
+    },
+    // function declaration
+    {
+      code: `function MyComponent() {
+        1==1;
+        return <div />
+       }`,
+      errors: [
+        {
+          message: "React component exceeds max lines.",
+          type: "FunctionDeclaration",
+        },
+      ],
+      options: ruleOptions,
+    },
     // class component
     // Component
     {
@@ -263,6 +306,68 @@ ruleTester.run("max-component-lines", rule, {
         {
           message: "React component exceeds max lines.",
           type: "ClassDeclaration",
+        },
+      ],
+      options: ruleOptions,
+    },
+  ],
+});
+
+const ruleTesterJsConfig = {
+  ...getRuleTesterConfig(),
+  parser: undefined,
+};
+const ruleTesterJs = new RuleTester(ruleTesterJsConfig);
+ruleTesterJs.run("max-component-lines (JS)", rule, {
+  valid: [
+    {
+      code: `const MyComponent = () => {
+               return <div />
+              }`,
+      options: ruleOptions,
+    },
+  ],
+
+  invalid: [
+    // function component: no typedefs
+    // arrow function
+    {
+      code: `const MyComponent = () => {
+        1==1;
+        return <div />
+       }`,
+      errors: [
+        {
+          message: "React component exceeds max lines.",
+          type: "ArrowFunctionExpression",
+        },
+      ],
+      options: ruleOptions,
+    },
+    // function expression
+    {
+      code: `const MyComponent = function() {
+        1==1;
+        return <div />
+       }`,
+      errors: [
+        {
+          message: "React component exceeds max lines.",
+          type: "FunctionExpression",
+        },
+      ],
+      options: ruleOptions,
+    },
+    // function declaration
+    {
+      code: `function MyComponent() {
+        1==1;
+        return <div />
+       }`,
+      errors: [
+        {
+          message: "React component exceeds max lines.",
+          type: "FunctionDeclaration",
         },
       ],
       options: ruleOptions,

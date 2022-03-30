@@ -2,6 +2,7 @@ const assert = require("assert");
 const {
   fcTypeAllShorthands,
   classTypeAllShorthands,
+  isReactComponentName,
 } = require("../../../lib/common/react-utils");
 
 describe("react-utils", () => {
@@ -34,6 +35,20 @@ describe("react-utils", () => {
         "React.PureComponent",
       ];
       assert.deepEqual(classTypeAllShorthands, expectedResult);
+    });
+  });
+
+  describe("isReactComponentName", () => {
+    it("SomeComponent is a component name", () => {
+      assert.ok(isReactComponentName("SomeComponent") === true);
+    });
+
+    it("someComponent is not a component name", () => {
+      assert.ok(isReactComponentName("someComponent") === false);
+    });
+
+    it("S is a component name", () => {
+      assert.ok(isReactComponentName("S") === true);
     });
   });
 });

@@ -71,6 +71,7 @@ This plugin allows for rule-level settings:
 {
   "settings": {
     "@nossbigg/eslint-plugin-clean-code-react": {
+      "jsCompatMode": false,
       "largeComponentLength": 50
     }
   }
@@ -79,7 +80,25 @@ This plugin allows for rule-level settings:
 
 ### Available settings:
 
-1.`largeComponentLength`
+1. `jsCompatMode`
+
+Purpose: Allows detection of React Function Component by name.
+
+- Example Function Component names: `MyComponent`, `Table`
+- Useful for non-TypeScript codebases, or codebases without a standardized type annotation convention.
+
+Used by:
+
+_All rules in the following categories:_
+
+- `component`
+- `fn-component`
+
+Value: `boolean`, default: `false`
+
+_Note_: May capture false positives (eg. `SomeUtilMethod()`).
+
+2.`largeComponentLength`
 
 Purpose: Determines the threshold for a large react component.
 
@@ -101,18 +120,30 @@ _Note_: When `largeComponentLength` is defined in multiple places, the precedenc
 ### Supported Syntax:
 
 ```typescript
-// Function Component using arrow function
-const MyFunctionComponent: React.FunctionComponent = () => <></>;
-
-// Function Component using function
-const MyFunctionComponent: React.FunctionComponent = function() => <></>;
-
 // Class Component
 class MyClassComponent extends React.Component {
   render() {
     return <></>;
   }
 }
+
+// === With type definition ===
+
+// Function Component using arrow function
+const MyFunctionComponent: React.FunctionComponent = () => <></>;
+// Function Component using function expression
+const MyFunctionComponent: React.FunctionComponent = function() => <></>;
+
+// === Without type definition ===
+// note: requires jsCompatMode = true
+
+// Function Component using arrow function
+const MyFunctionComponent = () => <></>;
+// Function Component using function expression
+const MyFunctionComponent = function() => <></>;
+// Function Component using function declaration
+function MyFunctionComponent() => <></>;
+
 ```
 
 Supported Function Component types:
@@ -140,22 +171,8 @@ Supported Class Component types:
 ### Unsupported Syntax:
 
 ```typescript
-// function component defined using function without assignment
-function MyFunctionComoponent() {
-  return <></>;
-}
-
-// curried function component generator
+// function component generator
 const makeMyFunctionComponent = (): React.FunctionComponent => () => <></>;
-
-// function without type definition
-const MyFunctionComponent = () => <></>;
-
-// function with JSX.ELement return type
-const MyFunctionComponent = (): JSX.Element => <></>;
-
-// function with React.ReactNode return type
-const MyFunctionComponent = (): React.ReactNode => <></>;
 ```
 
 ### Tip: Ensuring all function components are declared using arrow function.

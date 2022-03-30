@@ -6,6 +6,11 @@ exports.getRuleTesterConfig = () => {
       ecmaFeatures: { jsx: true },
       sourceType: "module",
     },
+    settings: {
+      "@nossbigg/eslint-plugin-clean-code-react": {
+        jsCompatMode: true,
+      },
+    },
   };
   return config;
 };
