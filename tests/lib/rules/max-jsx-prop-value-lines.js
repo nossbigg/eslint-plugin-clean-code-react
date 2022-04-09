@@ -23,7 +23,7 @@ ruleTester.run("max-jsx-prop-value-lines", rule, {
     {
       code: `const MyComponent: React.FC = () => { 
         return <Row 
-          onClick={() => { console.log('clicked!'); }}
+          onClick={() => { noop; }}
         />
       };
   `,
@@ -36,7 +36,7 @@ ruleTester.run("max-jsx-prop-value-lines", rule, {
       code: `const MyComponent: React.FC = () => { 
         return <Row 
           onClick={() => {
-            console.log('clicked!');
+            noop;
           }}
         />
       };`,
