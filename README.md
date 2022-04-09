@@ -155,25 +155,14 @@ function MyFunctionComponent() => <></>;
 
 Supported Function Component types:
 
-- `FunctionComponent`
-- `FC`
-- `StatelessComponent`
-- `SFC`
-- `VoidFunctionComponent`
-- `VFC`
-- `React.FunctionComponent`
-- `React.FC`
-- `React.StatelessComponent`
-- `React.SFC`
-- `React.VoidFunctionComponent`
-- `React.VFC`
+- `FunctionComponent` / `FC` / `React.FunctionComponent` / `React.FC`
+- `StatelessComponent` / `SFC` / `React.StatelessComponent` / `React.SFC`
+- `VoidFunctionComponent` / `VFC` / `React.VoidFunctionComponent` / `React.VFC`
 
 Supported Class Component types:
 
-- `Component`
-- `PureComponent`
-- `React.Component`
-- `React.PureComponent`
+- `Component` / `React.Component`
+- `PureComponent` / `React.PureComponent`
 
 ### Unsupported Syntax:
 

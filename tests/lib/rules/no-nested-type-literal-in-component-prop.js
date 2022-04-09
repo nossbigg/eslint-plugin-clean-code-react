@@ -26,6 +26,7 @@ ruleTester.run("no-nested-typedef-in-component-prop", rule, {
     `type SomeOtherType = {
       user: { firstName: string; lastName: string };
     };`,
+    `type MyComponentProps = SomeOtherType`,
   ],
 
   invalid: [
