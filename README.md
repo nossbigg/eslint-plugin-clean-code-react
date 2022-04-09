@@ -67,6 +67,7 @@ _Rules that apply to React Hooks_
 _Rules that apply to typedefs with 'Props'_
 | Rule | Description |
 | ---------------------------------------------------------------------- | -------------------------------------------------- |
+| [`max-properties-in-component-prop`](./docs/rules/max-hooks-in-custom-hook.md) | Component prop typedef does not exceed max properties. |
 | [`no-nested-type-literal-in-component-prop`](./docs/rules/max-hooks-in-custom-hook.md) | Component prop typedef does not contain nested typedef. |
 
 ## Rule-level settings
