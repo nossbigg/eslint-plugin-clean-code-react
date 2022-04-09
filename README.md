@@ -62,6 +62,13 @@ _Rules that apply to React Hooks_
 | ---------------------------------------------------------------------- | -------------------------------------------------- |
 | [`max-hooks-in-custom-hook`](./docs/rules/max-hooks-in-custom-hook.md) | Custom React Hooks do not use more than max hooks. |
 
+`typedefs`:
+
+_Rules that apply to typedefs with 'Props'_
+| Rule | Description |
+| ---------------------------------------------------------------------- | -------------------------------------------------- |
+| [`no-nested-type-literal-in-component-prop`](./docs/rules/max-hooks-in-custom-hook.md) | Component prop typedef does not contain nested typedef. |
+
 ## Rule-level settings
 
 This plugin allows for rule-level settings:
