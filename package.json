@@ -1,6 +1,6 @@
 {
   "name": "@nossbigg/eslint-plugin-clean-code-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "ESLint rules to keep your React components squeaky clean ✨🧼",
   "keywords": [
     "react",
@@ -24,10 +24,12 @@
   },
   "devDependencies": {
     "@nossbigg/peerdeps-manager": "^0.0.0-alpha2",
+    "@typescript-eslint/parser": "5.0.0",
     "eslint": "^8.0.1",
     "eslint-plugin-eslint-plugin": "^4.0.1",
     "eslint-plugin-node": "^11.1.0",
-    "mocha": "^9.1.3"
+    "mocha": "^9.1.3",
+    "typescript": "4.0.5"
   },
   "engines": {
     "node": "12.x || 14.x || >= 16"
