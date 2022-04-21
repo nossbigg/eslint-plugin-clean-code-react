@@ -42,9 +42,10 @@ _Rules that apply to JSX Elements_
 
 _Rules that apply to Function React Component_
 
-| Rule                                                               | Description                                                      |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| [`max-fn-component-hooks`](./docs/rules/max-fn-component-hooks.md) | React Function Component does not use more than max React Hooks. |
+| Rule                                                                                                   | Description                                                      |
+| ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| [`max-fn-component-hooks`](./docs/rules/max-fn-component-hooks.md)                                     | React Function Component does not use more than max React Hooks. |
+| [`no-fn-component-props-inline-destructure`](./docs/rules/no-fn-component-props-inline-destructure.md) | No function component props inline destructure.                  |
 
 `class-component`:
 
